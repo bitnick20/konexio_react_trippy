@@ -39,13 +39,17 @@ class HomeContainer extends React.Component {
     // }
 
     componentDidMount(){
-        console.log("src/containers/Homecontainer/componentDisMount #1 :", this.state)
-        const cities = Api.getHome();
-        console.log("src/containers/Homecontainer/componentDisMount #2 :", this.state)
-        this.setState({
-            cities: Api.getHome.cities
-        })
-        console.log("Je test ce truc :", this);
+        // console.log("src/containers/Homecontainer/componentDisMount #1 :", this.state)
+        Api.getHome().then((res) => {
+            this.setState({
+                cities: res
+            })
+        });
+        // console.log("src/containers/Homecontainer/componentDisMount #2 :", cities)
+        // this.setState({
+        //     cities: Api.getHome.cities
+        // })
+        // console.log("Je test ce truc :", this);
     }
     
   render() {
