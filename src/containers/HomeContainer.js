@@ -16,10 +16,38 @@
 
 import React from 'react';
 import Home from '../components/core/Home';
+import Api from '../utils/Api';
 import '../App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class HomeContainer extends React.Component {
+    // constructor(props) {
+    //     super(props);
+
+    //     this.state = {
+    //         cities: []
+            
+    //     }
+    // }
+
+    // componentDidMount () {
+    //     console.log("test 1")
+    //     Api.getHome();
+    //     // .then(json => console.log(json)); // data from promise 
+    //     // console.log("test 2")
+
+    // }
+
+    componentDidMount(){
+        console.log("src/containers/Homecontainer/componentDisMount #1 :", this.state)
+        const cities = Api.getHome();
+        console.log("src/containers/Homecontainer/componentDisMount #2 :", this.state)
+        this.setState({
+            cities: Api.getHome.cities
+        })
+        console.log("Je test ce truc :", this);
+    }
+    
   render() {
     return (
         <div>
