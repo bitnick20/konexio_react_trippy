@@ -5,7 +5,7 @@ class Api {
     getHome () {
          // const url = "http://localhost:3001/api/home" ;
         const url = Config.host + "/api/home";
-        // console.log("src/utils/Api :", url);
+        console.log("src/utils/Api :", url);
 
         // const cities =  [];
         // console.log("src/utils/Api cities :", cities);
@@ -18,7 +18,7 @@ class Api {
 
                 console.log(json)
                 const cities = json.cities;
-                // console.log("Affiche cities :", cities);
+                console.log("Affiche cities :", cities);
                 return cities;
  
             }));
