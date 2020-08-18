@@ -1,29 +1,35 @@
 import React from 'react';
+import Config from '../../Config';
+import styled from 'styled-components'
+import { Link } from 'react-router-dom';
+
+const Container = styled.div`
+    
+`;
 
 class Card extends React.Component {
-    // constructor (props) {
-    //     super(props);
-
-    //     this.state = {
-    //         name: '',
-    //         source: 'http://via.placeholder.com/300x200',
-    //         slug: ''
-    //     }
-    // }
-
     render () {
-        console.log("test: ", this.props)
+        console.log("components/city/Card#render : ", this.props)
         const {
             name,
             source,
-            slug
+            slug,
         } = this.props
         return (
-            <div>
-                <h3>{name}</h3>
-                <h3>{slug}</h3>
-                <img src={source}/>
-            </div>
+            <Container className='col-md-3 col-6'>
+                    <Link to={'/hotels?city=' + slug}>
+                        <div>
+                            <img src={Config.host + source}/>
+                            <p>{name}</p>
+                        </div>
+                    </Link>
+                
+            </Container>
+            // <div>
+            //     <h3>{name}</h3>
+            //     <h3>{slug}</h3>
+            //     <img src={Config.host + source}/>
+            // </div>
         );
     }
 }

@@ -26,8 +26,7 @@ class HomeContainer extends React.Component {
     
         this.state = {
           cities: []
-        }
-    }
+        }}
 
     componentDidMount(){
         console.log("src/containers/Homecontainer/componentDisMount #1 :", this.state)
