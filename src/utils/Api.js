@@ -16,9 +16,9 @@ class Api {
             .then(json => { 
                 // console.log("src/utils/Api json :", json);
 
-                console.log(json)
+                console.log("src/utils/Api json", json);
                 const cities = json.cities;
-                console.log("Affiche cities :", cities);
+                console.log("src/utils/Api cities", cities);
                 return cities;
  
             }));

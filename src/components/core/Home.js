@@ -1,6 +1,8 @@
 import React from 'react';
 import Api from '../../utils/Api';
 import Card from '../city/Card';
+import Gallery from '../city/Gallery';
+
 
 
 
@@ -10,27 +12,21 @@ class Home extends React.Component {
             cities
         } = this.props
 
-        // console.log("components/core/Home#render :", this.props);
+        // console.log("src/components/core/Home#render :", this.props);
         if(this.props.cities.length > 0) {
             return (
                 <div>
                     {cities.map((city) => {
- 
-                    return (
-                        <Card 
+                        return (
+                        <Card
                             name={city.name} 
                             slug={city.slug}
                             source={city.source}
                         />
-                        )
+                        );
                     })} 
-                    {/* <Card 
-                    name={this.props.cities[0].name}
-                    slug={this.props.cities[0].slug}
-                    source={this.props.cities[0].source}/> */}
                 </div>
             ); 
-            
         }
         return (
             <div>

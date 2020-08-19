@@ -1,24 +1,9 @@
-// import React from 'react';
-
-
-
-// class HomeContainer extends React.Component {
-//     render () {
-//         return (
-//             <div>
-//                 <p>Hello Home</p>
-//             </div>
-//         );
-//     }
-// }
-
-// export default HomeContainer;
-
 import React from 'react';
 import Home from '../components/core/Home';
 import Api from '../utils/Api';
 import '../App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Gallery from '../components/city/Gallery';
 
 class HomeContainer extends React.Component {
     constructor (props) {
@@ -45,7 +30,7 @@ class HomeContainer extends React.Component {
         } = this.state
         return (
             <div>
-                <Home cities={cities}/>
+                <Gallery cities={cities}/>
             </div>
         );
     }
